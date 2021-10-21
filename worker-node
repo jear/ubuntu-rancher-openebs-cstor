@@ -22,5 +22,5 @@ sudo wipefs -a /dev/sdb
 
 
 # Join RKE cluster
-sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.2 --server https://10.69.0.65 --token 5fxddrcp6kzpxw2c2k8s92h2ktbc4dwhsptmb5fgfgtfgljf9kctxv --ca-checksum 338ba74e8920fa67028ec16ff2fb3794382ca7b1f525beb6a9f9fcfcb901727a --worker
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.2 --server https://10.69.0.65 --token XXXX --ca-checksum XXX --worker
 ```
