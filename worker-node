@@ -1,13 +1,12 @@
 # Install Ubuntu with openssh and 2 disks - boot disk + empty disk
-# I have used bonding :
-```
+# I have used bonding  on 2x10Gb/s on very old hardware:
+
      parameters:
         lacp-rate: slow
         mode: 802.3ad
         transmit-hash-policy: layer2
-```
 
-```
+
 sudo visudo
 sudo apt-get update
 
