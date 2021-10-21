@@ -3,7 +3,9 @@
 # install operator
 kubectl apply -f https://openebs.github.io/charts/cstor-operator.yaml
 
+kubectl get bd -n openebs
 
+# fill-in the cspc.yaml to reflect your need
 k apply -f cspc-infra01.yaml 
 
 
