@@ -17,10 +17,14 @@ blockdevice-7f41031ca5c5bf69a32508d20c2bbf66   worker2    3840712638464   Unclai
 blockdevice-8deea3692e3d05d7d0ea3146faa296a2   worker4    3840722427904   Claimed      Active   32m
 blockdevice-e2a5e7d2813ebc83a98c9d1f35dc86ee   worker3    3840712638464   Unclaimed    Active   15m
 blockdevice-f61f2a3d142c7039413975714184a7aa   worker1    3840722427904   Claimed      Active   32m
+
+
 ubuntu@desktop3:~$ kubectl get cspc -n openebs
 NAME            HEALTHYINSTANCES   PROVISIONEDINSTANCES   DESIREDINSTANCES   AGE
 cstor-storage   4                  4                      4                  17m
-ubuntu@desktop3:~$ 
+
+
+
 ubuntu@desktop3:~$ kubectl get cspi -n openebs
 NAME                 HOSTNAME   FREE    CAPACITY        READONLY   PROVISIONEDREPLICAS   HEALTHYREPLICAS   STATUS   AGE
 cstor-storage-6vdx   worker2    3360G   3360000078500   false      0                     0                 ONLINE   18m
