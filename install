@@ -1,0 +1,26 @@
+# Install Ubuntu with openssh and 2 disks - boot disk + empty disk
+
+```
+sudo visudo
+sudo apt-get update
+
+# install Docker
+sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg     lsb-release -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg 
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+sudo usermod -aG docker $USER
+newgrp docker 
+
+# preapre node for OpenEBS
+sudo systemctl enable --now iscsid
+systemctl status iscsid 
+
+# Test the empty disk is really empty
+sudo wipefs -a /dev/sdb
+
+
+# Join RKE cluster
+sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.2 --server https://10.69.0.65 --token 5fxddrcp6kzpxw2c2k8s92h2ktbc4dwhsptmb5fgfgtfgljf9kctxv --ca-checksum 338ba74e8920fa67028ec16ff2fb3794382ca7b1f525beb6a9f9fcfcb901727a --worker
+```
