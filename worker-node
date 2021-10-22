@@ -24,6 +24,7 @@ sudo systemctl enable --now iscsid
 systemctl status iscsid 
 
 # Test the empty disk is really empty
+sudo vgremove VolBDSCStore
 sudo wipefs -a /dev/sdb
 
 
