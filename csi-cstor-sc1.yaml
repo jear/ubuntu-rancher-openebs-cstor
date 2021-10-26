@@ -1,9 +1,7 @@
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
-  name: cstor-csi
-  annotations:
-    storageclass.kubernetes.io/is-default-class: "true"
+  name: sc-datasvc-01
 provisioner: cstor.csi.openebs.io
 allowVolumeExpansion: true
 parameters:
