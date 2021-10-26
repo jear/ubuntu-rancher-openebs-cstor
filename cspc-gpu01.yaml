@@ -9,7 +9,7 @@ spec:
         kubernetes.io/hostname: "worker-gpu-1"
       dataRaidGroups:
       - blockDevices:
-          - blockDeviceName: "blockdevice-88c41a634af90ca2891b9f7eead02080"
+          - blockDeviceName: "blockdevice-38003102259819786b098db5d603ead6"
       poolConfig:
         dataRaidGroupType: "stripe"
 
@@ -17,8 +17,8 @@ spec:
         kubernetes.io/hostname: "worker-gpu-3" 
       dataRaidGroups:
         - blockDevices:
-            - blockDeviceName: "blockdevice-1c0d6a1996cbe4a6b7ebf056d0a3ec51"
-            - blockDeviceName: "blockdevice-85f21a624473f04982172d780815fddd"
+            - blockDeviceName: "blockdevice-27cb4f9b011d8cf24b091aa2803475fa"
+            - blockDeviceName: "blockdevice-e853854d65fb9b41e85f7ef5ffa2063a"
       poolConfig:
         dataRaidGroupType: "stripe"
 
@@ -26,8 +26,8 @@ spec:
         kubernetes.io/hostname: "worker-gpu-7"
       dataRaidGroups:
         - blockDevices:
-            - blockDeviceName: "blockdevice-86ce43952c55710bd44ddf653da12cc6"
-            - blockDeviceName: "blockdevice-d25ea8f848803941be27fda3590dd6d2"
+            - blockDeviceName: "blockdevice-8179ead6c96cef9f75b615ab91e0a19a"
+            - blockDeviceName: "blockdevice-b57845d65983b0218b4803c00438e4c6"
       poolConfig:
         dataRaidGroupType: "stripe"
 
