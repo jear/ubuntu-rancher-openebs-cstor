@@ -31,3 +31,12 @@ spec:
       poolConfig:
         dataRaidGroupType: "stripe"
 
+    - nodeSelector:
+        kubernetes.io/hostname: "worker-gpu-2"
+      dataRaidGroups:
+        - blockDevices:
+            - blockDeviceName: "blockdevice-6662057aae0da5e440480125718fabce"
+      poolConfig:
+        dataRaidGroupType: "stripe"
+
+

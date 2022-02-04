@@ -30,12 +30,10 @@ spec:
         dataRaidGroupType: "stripe"
 
     - nodeSelector:
-        kubernetes.io/hostname: "worker9"
+        kubernetes.io/hostname: "worker10"
       dataRaidGroups:
         - blockDevices:
-            - blockDeviceName: "blockdevice-6fc0c49b9850d34f5798af90f9d71e13"
+            - blockDeviceName: "blockdevice-bcebd897de233bda85c7f9a8287aa09d"
       poolConfig:
         dataRaidGroupType: "stripe"
-
-
 
