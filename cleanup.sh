@@ -8,4 +8,6 @@ sudo rm -rf /var/lib/rancher
 sudo rm -rf /etc/kubernetes
 sudo rm -rf /opt/rke
 sudo systemctl restart docker
+sudo reboot
+
 
